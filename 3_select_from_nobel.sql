@@ -25,14 +25,17 @@ SELECT * FROM nobel
                   'Woodrow Wilson',
                   'Jimmy Carter','Barack Obama')
 --7.Show the winners with first name John
-elect winner from nobel
+select winner from nobel
 where winner like 'john%'
+
 --8.Show the year, subject, and name of Physics winners for 1980 together with the Chemistry winners for 1984.
 select * from nobel
-where(subject='Physics' and yr=1980) or (subject='Chemistry' and yr= 1984
+where(subject='Physics' and yr=1980) or (subject='Chemistry' and yr= 1984)
+
 --9.Show the year, subject, and name of winners for 1980 excluding Chemistry and Medicine
 select * from nobel
 where yr=1980 and subject not in('Chemistry','Medicine')
+
 --10.Show year, subject, and name of people who won a 'Medicine' prize in an early year (before 1910, not including 1910) together 
 --with winners of a 'Literature' prize in a later year (after 2004, including 2004)
 select * from nobel
